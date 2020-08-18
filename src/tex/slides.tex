@@ -1,0 +1,101 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Slides : R for clinical trialists %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% PREAMBLE
+%% Define document class and basic options
+\documentclass{beamer}
+%\setlength{\parindent}{0pt}
+
+%% Load packages
+\usepackage{palatino}
+%\usepackage{amsfonts}
+%\usepackage{amsmath}
+%\usepackage{listings}
+\usepackage{verbatim}
+\usetheme{Madrid}
+
+%% Basic info
+\title{R for Clinical Trialists}
+\subtitle{An introduction}
+\author{Roy Nitulescu\inst{1}}
+
+\institute
+{
+    \inst{1}%
+    CITADEL\\
+    CR-CHUM
+}
+
+\date{McGill University, Nov. 18, 2020}
+
+\AtBeginSection[]
+{
+    \begin{frame}
+        \frametitle{Table of Contents}
+        \tableofcontents[currentsection]
+    \end{frame}
+}
+
+
+%% BEGIN DOCUMENT
+\begin{document}
+
+%%%%
+%% Slides
+%%%%
+
+\frame{\titlepage}
+
+\begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents
+\end{frame}
+
+
+%%%%
+%% MODULE 1
+%%%%
+
+\section{Module 1: Introduction to R}
+
+\subsection{Brief overview of R programming language}
+
+\begin{frame}
+    \frametitle{What is R?}
+    text...
+\end{frame}
+
+\subsection{Basic R objects}
+
+\begin{frame}[fragile]
+    \frametitle{Scalars and vectors}
+    \verbatiminput{../R/module1/scalars_vectors.Rout}
+\end{frame}
+
+\begin{frame}[fragile]
+    \frametitle{Matrices}
+    \verbatiminput{../R/module1/matrices.Rout}
+\end{frame}
+
+
+%%%%
+%% MODULE 2
+%%%%
+
+\section{Module 2: Data analysis in R}
+
+
+
+%%%%
+%% MODULE 3
+%%%%
+
+\section{Module 3: Research design in R}
+
+
+
+
+%% END DOCUMENT
+\end{document}
+
