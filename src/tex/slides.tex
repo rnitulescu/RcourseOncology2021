@@ -11,8 +11,19 @@
 \usepackage{palatino}
 %\usepackage{amsfonts}
 %\usepackage{amsmath}
+%\usepackage{url}
+\usepackage{hyperref}
 %\usepackage{listings}
 \usepackage{verbatim}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	citecolor=red,
+	filecolor=blue,
+	urlcolor=blue
+}
+
 \usetheme{Madrid}
 
 %% Basic info
@@ -62,40 +73,65 @@
 \subsection{Brief overview of R programming language}
 
 %% Intro
+%% Commented out this and the next slide and replaced with one simpler slide
+%\begin{frame}
+%    \frametitle{What is R?}
+%    \begin{enumerate}
+%      \item Free/Libre and Open Source Software (FLOSS)
+%      \begin{enumerate}
+%        \item Free as in ``free beer'', but also free as in ``free speech''
+%        \item Users are free to look at the source code, suggest improvements, submit bug fixes, and create custom libraries
+%        \item This encourages the development of a community of users working together to improve the software and make it accessible
+%      \end{enumerate}
+%      \item R is a software environment for statistical computing and graphics
+%      \begin{enumerate}
+%        \item Process data, calculate summary statistics, and fit statistical models with very litte code
+%        \item Create standard plots with very little code or build custom graphics to suit any needs
+%        \item Interact with your operating system to automate many tedious tasks
+%      \end{enumerate}
+%    \end{enumerate}
+%\end{frame}
+
+
+%\begin{frame}
+%    \frametitle{Strengths and Weaknesses}
+%    \begin{enumerate}
+%      \item Strengths
+%      \begin{enumerate}
+%        \item Accessible, portable, and well documented
+%        \item Flexible and extendable
+%        \item Relatively efficient (especially compared to SAS)
+%      \end{enumerate}
+%      \item Weaknesses
+%      \begin{enumerate}
+%        \item Data must fit in memory (this can be overcome with some libraries)
+%        \item Steep learning curve (especially compared to SAS or Stata)
+%        \item Efficient extension requires professional programming know-how
+%      \end{enumerate}
+%    \end{enumerate}
+%\end{frame}
+
+
+%% Simpler version of the above
 \begin{frame}
     \frametitle{What is R?}
     \begin{enumerate}
-      \item Free/Libre and Open Source Software (FLOSS)
-      \begin{enumerate}
-        \item Free as in ``free beer'', but also free as in ``free speech''
-        \item Users are free to look at the source code, suggest improvements, submit bug fixes, and create custom libraries
-        \item This encourages the development of a community of users working together to improve the software and make it accessible
-      \end{enumerate}
-      \item R is a software environment for statistical computing and graphics
-      \begin{enumerate}
-        \item Process data, calculate summary statistics, and fit statistical models with very litte code
-        \item Create standard plots with very little code or build custom graphics to suit any needs
-        \item Interact with your operating system to automate many tedious tasks
-      \end{enumerate}
+	  \item Software environment for statistical computing and graphics
+	  \item Steep learning curve
+	  \item Worth learning due to its ubiquity, versatility, and efficiency
     \end{enumerate}
 \end{frame}
 
 
 \begin{frame}
-    \frametitle{Strengths and Weaknesses}
+    \frametitle{Getting help}
     \begin{enumerate}
-      \item Strengths
-      \begin{enumerate}
-        \item Accessible, portable, and well documented
-        \item Flexible and extendable
-        \item Relatively efficient (especially compared to SAS)
-      \end{enumerate}
-      \item Weaknesses
-      \begin{enumerate}
-        \item Data must fit in memory (this can be overcome with some libraries)
-        \item Steep learning curve (especially compared to SAS or Stata)
-        \item Efficient extension requires professional programming know-how
-      \end{enumerate}
+	  \item Official documentation: \url{https://cran.r-project.org/manuals.html}
+	  \item Cheat sheet: \href{https://cran.r-project.org/doc/contrib/Short-refcard.pdf}{Link}
+	  \item Forums: \url{https://stackoverflow.com/}, \url{https://stackexchange.com/}, etc.
+	  \item In R: \texttt{?topic}, \texttt{??keyword}
+	  \item Examples of general topics: \texttt{?Logic}, \texttt{?Arithmetic}, \texttt{?Syntax}
+	  \item Examples of more specific topics: \texttt{?getwd}, \texttt{?dir}
     \end{enumerate}
 \end{frame}
 
@@ -107,8 +143,8 @@
     \frametitle{The environment}
     \begin{enumerate}
       \item Working directory, paths, files
-      \item libraries and the global environment
-      \item Objects in the local environment
+      \item libraries and the \emph{global} environment
+      \item Objects in the \emph{local} environment
       \item \texttt{options()} function (see documentaton for details)
     \end{enumerate}
     \verbatiminput{../R/module1/environment.Rout}
@@ -141,8 +177,20 @@
 
 
 \begin{frame}[fragile]
-    \frametitle{Control structures}
+    \frametitle{Control structures: If / Else}
     \verbatiminput{../R/module1/if_else.Rout}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Control structures: For / While}
+    \verbatiminput{../R/module1/for_while.Rout}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Control structures: Repeat / Next / Break}
+    \verbatiminput{../R/module1/repeat_next_break.Rout}
 \end{frame}
 
 
