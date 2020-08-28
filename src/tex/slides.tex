@@ -38,13 +38,21 @@
     CR-CHUM
 }
 
-\date{McGill University, Nov. 18, 2020}
+\date[McGill, Nov. 18, 2020]{McGill University, Nov. 18, 2020}
 
 \AtBeginSection[]
 {
     \begin{frame}
         \frametitle{Table of Contents}
         \tableofcontents[currentsection]
+    \end{frame}
+}
+
+\AtBeginSubsection[]
+{
+    \begin{frame}
+        \frametitle{Table of Contents}
+        \tableofcontents[currentsubsection]
     \end{frame}
 }
 
@@ -176,22 +184,45 @@
 \end{frame}
 
 
+\subsection{Control structures}
+
 \begin{frame}[fragile]
-    \frametitle{Control structures: If / Else}
+    \frametitle{If / Else}
     \verbatiminput{../R/module1/if_else.Rout}
 \end{frame}
 
 
 \begin{frame}[fragile]
-    \frametitle{Control structures: For / While}
+    \frametitle{For / While}
     \verbatiminput{../R/module1/for_while.Rout}
 \end{frame}
 
 
 \begin{frame}[fragile]
-    \frametitle{Control structures: Repeat / Next / Break}
+    \frametitle{Repeat / Next / Break}
     \verbatiminput{../R/module1/repeat_next_break.Rout}
 \end{frame}
+
+
+\subsection{Basic object manipulation}
+
+\begin{frame}[fragile]
+    \frametitle{c, rbind, cbind}
+    \verbatiminput{../R/module1/c_rbind_cbind.Rout}
+\end{frame}
+
+
+
+
+
+
+
+\subsection{Intermediate object manipulation}
+
+
+
+\subsection{Basic variable transformation}
+
 
 
 
