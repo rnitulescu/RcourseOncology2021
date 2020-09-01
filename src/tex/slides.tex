@@ -123,24 +123,24 @@
 %% Simpler version of the above
 \begin{frame}
     \frametitle{What is R?}
-    \begin{enumerate}
+    \begin{itemize}
 	  \item Software environment for statistical computing and graphics
 	  \item Steep learning curve
 	  \item Worth learning due to its ubiquity, versatility, and efficiency
-    \end{enumerate}
+    \end{itemize}
 \end{frame}
 
 
 \begin{frame}
     \frametitle{Getting help}
-    \begin{enumerate}
+    \begin{itemize}
 	  \item Official documentation: \url{https://cran.r-project.org/manuals.html}
 	  \item Cheat sheet: \href{https://cran.r-project.org/doc/contrib/Short-refcard.pdf}{Link}
 	  \item Forums: \url{https://stackoverflow.com/}, \url{https://stackexchange.com/}, etc.
 	  \item In R: \texttt{?topic}, \texttt{??keyword}
 	  \item Examples of general topics: \texttt{?Logic}, \texttt{?Arithmetic}, \texttt{?Syntax}
 	  \item Examples of more specific topics: \texttt{?getwd}, \texttt{?dir}
-    \end{enumerate}
+    \end{itemize}
 \end{frame}
 
 
@@ -149,12 +149,12 @@
 
 \begin{frame}[fragile]
     \frametitle{The environment}
-    \begin{enumerate}
+    \begin{itemize}
       \item Working directory, paths, files
       \item libraries and the \emph{global} environment
       \item Objects in the \emph{local} environment
       \item \texttt{options()} function (see documentaton for details)
-    \end{enumerate}
+    \end{itemize}
     \verbatiminput{../R/module1/environment.Rout}
 \end{frame}
 
@@ -184,22 +184,39 @@
 \end{frame}
 
 
+\begin{frame}[fragile]
+    \frametitle{Accessing objects}
+	\begin{itemize}
+	  \item S3 objects
+	    \begin{itemize}
+	      \item For vectors and matrices, accessing elements is pretty straightforward
+	      \item For other objects, it can be a little more abstract
+	      \item It is easier to understand them through examples (cue mtcars example)
+	      \item \texttt{[]}: Access component(s) inside of an object
+	      \item \texttt{\$}: Access contents of a single component inside of an object
+	      \item \texttt{[[]]}: Same as \texttt{\$}, but more flexible for programming
+	    \end{itemize}
+	  \item S4 objects are beyond the scope of this course
+	\end{itemize}
+\end{frame}
+
+
 \subsection{Control structures}
 
 \begin{frame}[fragile]
-    \frametitle{If / Else}
+    \frametitle{if, else}
     \verbatiminput{../R/module1/if_else.Rout}
 \end{frame}
 
 
 \begin{frame}[fragile]
-    \frametitle{For / While}
+    \frametitle{for, while}
     \verbatiminput{../R/module1/for_while.Rout}
 \end{frame}
 
 
 \begin{frame}[fragile]
-    \frametitle{Repeat / Next / Break}
+    \frametitle{repeat, next, break}
     \verbatiminput{../R/module1/repeat_next_break.Rout}
 \end{frame}
 
@@ -212,13 +229,30 @@
 \end{frame}
 
 
+\begin{frame}[fragile]
+    \frametitle{merge}
+    \verbatiminput{../R/module1/merge.Rout}
+\end{frame}
 
 
-
+\begin{frame}[fragile]
+    \frametitle{order, names}
+    \verbatiminput{../R/module1/order_names.Rout}
+\end{frame}
 
 
 \subsection{Intermediate object manipulation}
 
+\begin{frame}[fragile]
+    \frametitle{aggregate}
+    \verbatiminput{../R/module1/aggregate.Rout}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{reshape}
+    \verbatiminput{../R/module1/reshape.Rout}
+\end{frame}
 
 
 \subsection{Basic variable transformation}
