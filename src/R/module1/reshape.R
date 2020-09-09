@@ -1,4 +1,4 @@
-## 15) reshape (wide -> long, long -> wide)
+## 16) reshape (wide -> long, long -> wide)
 wide <- data.frame(id=1:2,
 				   var_1=rnorm(2), var_2=rnorm(2))
 print(wide)

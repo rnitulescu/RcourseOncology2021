@@ -1,4 +1,4 @@
-## 14) aggregate (collapse data)
+## 15) aggregate (collapse data)
 x <- data.frame(id=c(1,1,2,2,2),
 				var=c(2,8,5,10,15))
 

@@ -78,7 +78,7 @@
 
 \section{Module 1: Introduction to R}
 
-\subsection{Brief overview of R programming language}
+\subsection{Getting started}
 
 %% Intro
 %% Commented out this and the next slide and replaced with one simpler slide
@@ -128,6 +128,16 @@
 	  \item Steep learning curve
 	  \item Worth learning due to its ubiquity, versatility, and efficiency
     \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+	\frametitle{Installing R}
+	\begin{itemize}
+	  \item Web page: \url{http://cran.utstat.utoronto.ca/}\footnote{This is the Ontario mirror. You can choose any mirror from here: \url{https://cran.r-project.org/mirrors.html}}
+	  \item \textbf{Windows and Mac}: Download and install precompiled binary distributions
+	  \item \textbf{Linux}: Install through package manager or compile from source
+	\end{itemize}
 \end{frame}
 
 
@@ -236,6 +246,12 @@
 
 
 \begin{frame}[fragile]
+    \frametitle{subset}
+    \verbatiminput{../R/module1/subset.Rout}
+\end{frame}
+
+
+\begin{frame}[fragile]
     \frametitle{order, names}
     \verbatiminput{../R/module1/order_names.Rout}
 \end{frame}
@@ -257,6 +273,33 @@
 
 \subsection{Basic variable transformation}
 
+\begin{frame}[fragile]
+    \frametitle{Working with dates}
+    \verbatiminput{../R/module1/dates.Rout}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Working with times}
+    \verbatiminput{../R/module1/times.Rout}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Useful functions to look up for future advancement}
+    We've covered a lot of ground in this module,
+    but those interested in more advanced programming in R
+    will greatly benefit from researching these functions:\\
+    
+    \begin{itemize}
+      \item \texttt{with} and \texttt{within}
+      \item \texttt{lapply}, \texttt{sapply}, and other \texttt{*apply}
+      \item \texttt{gsub}, \texttt{grep}, \texttt{regexpr}, and other similar ones 
+      \item \texttt{Map} and \texttt{Reduce}
+      \item \texttt{assign} and \texttt{get}
+      \item \texttt{debug} and \texttt{undebug}
+    \end{itemize}
+\end{frame}
 
 
 
