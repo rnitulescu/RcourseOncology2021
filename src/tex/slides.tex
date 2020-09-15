@@ -28,7 +28,7 @@
 
 %% Basic info
 \title{R for Clinical Trialists}
-\subtitle{An introduction}
+\subtitle{An Introduction}
 \author{Roy Nitulescu\inst{1}}
 
 \institute
@@ -181,6 +181,30 @@
 \end{frame}
 
 
+\begin{frame}
+    \frametitle{Retrieving elements}
+    Elements of vectors and matrices can be retrieved either by numeric indexing (1, 2, 3, etc.)
+    or by logical indexing (TRUE, FALSE).
+    This means that one can index an R object using expressions that resolve to logical vectors.
+    In fact, this technique is used a lot in practice.
+    Also note that the function \texttt{which} can be used to convert from logical to numeric indexing.
+    \begin{itemize}
+      \item Vectors
+        \begin{itemize}
+          \item Retrieve element \texttt{n} of vector \texttt{x}: \texttt{> x[n]}
+          \item 3rd element of a vector of length 3:\\ \texttt{> x[c(FALSE, FALSE, TRUE)]}
+        \end{itemize}
+      \item Matrices (\texttt{r} for row and \texttt{c} for column)
+        \begin{itemize}
+          \item Retrieve element (\texttt{r}, \texttt{c}) from matrix \texttt{X}: \texttt{> X[r, c]}
+          \item Retrieve row \texttt{r} from matrix \texttt{X}: \texttt{> X[r, ]}
+          \item Retrieve column \texttt{c} from matrix \texttt{X}: \texttt{> X[, c]}
+        \end{itemize}
+    \end{itemize}
+    \textbf{Question}: What is the difference between \texttt{X[1,2]} and \texttt{X[c(1,2)]}?
+\end{frame}
+
+
 \begin{frame}[fragile]
     \frametitle{Lists}
     \fontsize{11pt}{10}\selectfont
@@ -199,7 +223,7 @@
 	\begin{itemize}
 	  \item S3 objects
 	    \begin{itemize}
-	      \item For vectors and matrices, accessing elements is pretty straightforward
+	      \item For vectors and matrices, accessing elements is pretty straightforward (see above)
 	      \item For other objects, it can be a little more abstract
 	      \item It is easier to understand them through examples (cue mtcars example)
 	      \item \texttt{[]}: Access component(s) inside of an object
