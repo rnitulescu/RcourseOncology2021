@@ -66,6 +66,28 @@
 
 \frame{\titlepage}
 
+
+\begin{frame}
+    \frametitle{Preamble}
+    \begin{itemize}
+      \item This 3-hour lecture will be broken down into 3 modules
+      \item Each module will last 50 minutes
+      \begin{itemize}
+        \item 30 minutes of lecture time
+        \item 10 minutes for exercises
+        \item 10 minutes for discussing the exercises
+      \end{itemize}
+      \item There will be two 15-minute breaks between the modules
+      \item I expect that all students have already installed R on their computer and tested that it works
+    \end{itemize}
+    
+    \vfill
+    
+    The source code for this presentation can be found here:\\
+    \url{https://github.com/rnitulescu/RcourseOncology2020}
+\end{frame}
+
+
 \begin{frame}
     \frametitle{Table of Contents}
     \tableofcontents
@@ -343,6 +365,8 @@
 
 \section{Module 2: Data analysis in R}
 
+\subsection{...}
+
 
 
 %%%%
@@ -351,7 +375,91 @@
 
 \section{Module 3: Research design in R}
 
+\subsection{Power and sample size calculations}
 
+\begin{frame}
+    \frametitle{The \texttt{pwr} package}
+    \begin{itemize}
+      \item ... (install package code in R)
+      \item ...
+    \end{itemize}
+\end{frame}
+
+
+\subsection{Randomization}
+
+\begin{frame}
+    \frametitle{Simple randomization}
+	Treatment is randomly allocated to each subject according to a pre-determined probability distribution.\\
+	
+	\bigskip
+	
+	For example, you plan to recruit 10 subjects and randomly assign to each subject 
+	one of two possible treatments, $A$ or $B$, with equal probability.
+	
+	\bigskip
+	
+	To implement this randomization scheme, one must only sample, with equal probability,
+	10 times from the set $\{A, B\}$ with replacement.
+	
+	\bigskip
+	
+	The downside of this method is that it does not guarantee that each treatment group will
+	have the same number of subjects (i.e., are balanced).
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Simple randomization: Example}
+	\verbatiminput{../R/module3/simple_randomization.Rout}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Replacement randomization}
+	Replacement randomization is a method used to ensure that treatment allocations
+	done through simple randomization are balanced.
+	
+	\bigskip
+	
+	This is put into practice by repeating the simple randomization until balance is achieved.
+	
+	\bigskip
+	
+	The downside is that as the sample size and the number of treatment groups increase, the number
+	of iterations required to achieve a balanced allocation increases very quickly and can
+	become computationally too intensive (this is perhaps not much of an issue nowadays).
+	
+	\bigskip
+	
+	A more relevant downside is that there is no guarantee that the treatment allocation will
+	consistently remain balanced over time as patients are enrolled and the randomization
+	list is followed.
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Replacement randomization: Example}
+	\verbatiminput{../R/module3/replacement_randomization.Rout}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Random permuted blocks}
+	...
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Random permuted blocks: Example}
+	\verbatiminput{../R/module3/permuted_blocks.Rout}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Stratification}
+	...
+\end{frame}
 
 
 %% END DOCUMENT
