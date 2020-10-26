@@ -405,7 +405,7 @@
 	\bigskip
 	
 	The downside of this method is that it does not guarantee that each treatment group will
-	have the same number of subjects (i.e., are balanced).
+	have the same number of subjects (i.e., be balanced).
 \end{frame}
 
 
@@ -446,7 +446,20 @@
 
 \begin{frame}
     \frametitle{Random permuted blocks}
-	...
+	A solution to the problem of maintaining balanced allocation over time is to use random permuted blocks.
+
+    \bigskip
+
+    A block size is chosen and allocations are permuted within each block.
+    This guarantees balance each time a block is completely filled.
+
+    \bigskip
+
+    Ex: \emph{block 1} $[A, A, B, B]$, \emph{block 2} $[B, A, A, B]$, etc.
+
+    \bigskip
+
+    Block sizes can also, optionally, be randomized to make it easier to maintain blinding.
 \end{frame}
 
 
@@ -458,7 +471,23 @@
 
 \begin{frame}
     \frametitle{Stratification}
-	...
+    If one wishes to maintain balance in treatment allocation not only in the overall sample, but also
+    in specific sub-groups, then stratified randomization can be used.
+
+    \bigskip
+
+    To perform this kind of randomization, treatments are allocated in such a way to maintain balance across sub-groups.
+
+    \bigskip
+
+    For example, in the context of block randomization, at any time there are two active blocks being filled:
+    one for males and one for females. Thus, whenever all blocks are filled, treatment allocation is balanced
+    for both males and females.
+
+    \bigskip
+
+    In practice, this simply entails generating one randomization list per sub-group using one of the three
+    methods exemplified above.
 \end{frame}
 
 

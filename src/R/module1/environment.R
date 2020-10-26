@@ -1,4 +1,4 @@
-setwd("~/Documents/Projects/Rcourse/src/R")
+setwd("~/Documents/proj/lectures/mcgill")
 getwd()
 list.files()
 library("pwr")
