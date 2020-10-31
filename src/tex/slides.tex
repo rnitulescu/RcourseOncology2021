@@ -367,6 +367,13 @@
 
 \subsection{...}
 
+%% under construction ... TODO
+
+\begin{frame}
+    \frametitle{Exercises}
+    Take 10 minutes to work on the in-class exercises for module 2.
+    They can be found \href{https://github.com/rnitulescu/RcourseOncology2020/blob/master/exercises2.R}{here}.
+\end{frame}
 
 
 %%%%
@@ -375,17 +382,40 @@
 
 \section{Module 3: Research design in R}
 
+%% Power
 \subsection{Power and sample size calculations}
 
 \begin{frame}
     \frametitle{The \texttt{pwr} package}
     \begin{itemize}
-      \item ... (install package code in R)
-      \item ...
+      \item \texttt{install.packages("pwr")}
+      \item \texttt{library(pwr)}
+      \item \emph{Statistical Power Analysis for the Behavioral Sciences}, by Jacob Cohen
+      \item Example functions: \texttt{pwr.p.test},
+            \texttt{pwr.t.test}, \texttt{pwr.2p.test},
+            \texttt{pwr.chisq.test}, \texttt{pwr.anova.test}
     \end{itemize}
 \end{frame}
 
 
+\begin{frame}[fragile]
+    \frametitle{Power for comparison of two proportions from independent samples}
+    \fontsize{10}{12}\selectfont
+    \verbatiminput{../R/module3/pwr_2p2n.Rout}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Power for comparison of two means from independent samples}
+    \fontsize{10}{12}\selectfont
+    \verbatiminput{../R/module3/pwr_t2n.Rout}
+\end{frame}
+
+
+%% under construction ... TODO
+
+
+%% Randomizaton
 \subsection{Randomization}
 
 \begin{frame}
@@ -495,6 +525,14 @@
     \frametitle{Exercises}
     Take 10 minutes to work on the in-class exercises for module 3.
     They can be found \href{https://github.com/rnitulescu/RcourseOncology2020/blob/master/exercises3.R}{here}.
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Review / Questions}
+    \vfill
+    Does anyone have any specific questions?
+    \vfill
 \end{frame}
 
 
