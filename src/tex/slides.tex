@@ -9,8 +9,8 @@
 
 %% Load packages
 \usepackage{palatino}
-%\usepackage{amsfonts}
-%\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsmath}
 %\usepackage{url}
 \usepackage{hyperref}
 %\usepackage{listings}
@@ -414,7 +414,6 @@
 
 \begin{frame}[fragile]
     \frametitle{Box and whisker plot}
-    %\fontsize{9}{11}\selectfont
     \verbatiminput{../R/module2/boxplot.R} %% Not Rout for this one.
     \begin{figure}[b]
       \centering
@@ -433,6 +432,35 @@
 %% under construction ... TODO
 
 \subsection{Ordinary least squares}
+
+\begin{frame}
+    \frametitle{The model}
+    \textbf{Likelihood / observation model}
+    \[y_i \sim \text{Normal}(\mu_i, \sigma_e)\]
+    \textbf{Linear predictor}
+    \[\mu_i = x_i' \beta\]
+    \bigskip
+    Given $\{y_i, x_i\}$ for $i=1,...,n$, solve for the regression coefficients, $\beta$,
+    and the error variance, $\sigma_e^2$.
+    \bigskip
+    There are several solutions, including the famous ordinary least-squares estimate.
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{lm - Fit model and get summary output}
+    \fontsize{8}{10}\selectfont
+    \verbatiminput{../R/module2/lm.Rout}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{lm - Confidence intervals}
+    %\fontsize{8}{10}\selectfont
+    \verbatiminput{../R/module2/lm_confint.Rout}
+\end{frame}
+
+
 
 %% under construction ... TODO
 
