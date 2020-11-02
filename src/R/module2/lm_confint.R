@@ -1,2 +1,7 @@
-fit <- lm(mpg ~ hp + cyl + hp:cyl, data=mtcars)
+fit <- lm(mpg ~ hp, data=mtcars)
+
+coefficients(fit)
+
 confint(fit)
+
+vcov(fit)

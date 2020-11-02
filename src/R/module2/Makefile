@@ -8,9 +8,11 @@ all :
 	R CMD BATCH $(MYFLAGS) boxplot.R
 	R CMD BATCH $(MYFLAGS) lm.R
 	R CMD BATCH $(MYFLAGS) lm_confint.R
+	R CMD BATCH $(MYFLAGS) lm_matrix.R
 	## Concatenate all the scripts together
 	cat table_xtabs.R summary.R scatter.R qqplot.R \
-	    hist_dens.R boxplot.R lm.R lm_confint.R > module2.R
+	    hist_dens.R boxplot.R lm.R lm_confint.R \
+	    lm_matrix.R > module2.R
 	cp module2.R ../../../module2.R
 clean : 
 	@rm -f *.eps *.Rout module2.R
