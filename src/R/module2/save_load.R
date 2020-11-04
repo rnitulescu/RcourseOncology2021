@@ -1,0 +1,15 @@
+## R objects
+save(mtcars, file="mtcars.RData")
+ls()
+load("mtcars.RData")
+ls()
+## csv (text) files
+write.csv(mtcars, file="mtcars.csv", row.names=TRUE)
+mtcars2 <- read.csv("mtcars.csv", row.names=1)
+ls()
+## xlsx files (several options: xlsx, openxlsx, readxl)
+library(openxlsx)
+write.xlsx(mtcars, file="mtcars.xlsx", row.names=TRUE)
+mtcars3 <- read.xlsx(xlsxFile="mtcars.xlsx", rowNames=TRUE)
+ls()
+all(mtcars == mtcars2) & all(mtcars2 == mtcars3)
