@@ -1,0 +1,4 @@
+library(survival)
+ds <- within(lung, death <- ifelse(status == 2, 1, 0))
+fit <- coxph(Surv(time, death) ~ age, data=ds)
+summary(fit)

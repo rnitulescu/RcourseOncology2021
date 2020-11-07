@@ -491,7 +491,6 @@
     \verbatiminput{../R/module2/lm_matrix.Rout}
 \end{frame}
 
-%% under construction ... TODO
 
 \subsection{Logistic regression}
 
@@ -522,11 +521,49 @@
 \end{frame}
 
 
-%% under construction ... TODO
-
 \subsection{Cox proportional-hazards model}
 
-%% under construction ... TODO
+\begin{frame}
+    \frametitle{The model}
+    \textbf{The hazard function}
+    \[\lambda(t; x_i) = \lambda_0 e^{x_i(t)' \beta}\]
+
+    \bigskip
+
+    As opposed to the linear and generalized linear models presented above,
+    this model has not intercept. Instead, the unspecified baseline hazard function
+    ($\lambda_0$), acts as the intercept.
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Cox PH model - Fit model and get summary output}
+    \fontsize{8}{10}\selectfont
+    \verbatiminput{../R/module2/coxph.Rout}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Cox PH model - Hazard ratios and confidence intervals}
+    \fontsize{9}{11}\selectfont
+    \verbatiminput{../R/module2/coxph_confint.Rout}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Cox PH model - Checking proportionality assumption}
+    \fontsize{9}{11}\selectfont
+    \verbatiminput{../R/module2/coxph_check_ph.Rout}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{Cox PH model - Schoenfeld residual plot}
+    \begin{figure}[b]
+      \centering
+      \includegraphics[scale=0.75]{../R/module2/schoenfeld.eps}
+    \end{figure}
+\end{frame}
 
 
 \begin{frame}%% TODO: Exercises for module 2

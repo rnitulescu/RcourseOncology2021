@@ -16,12 +16,16 @@ all :
 	R CMD BATCH $(MYFLAGS) lm_matrix.R
 	R CMD BATCH $(MYFLAGS) logit.R
 	R CMD BATCH $(MYFLAGS) logit_confint.R
+	R CMD BATCH $(MYFLAGS) coxph.R
+	R CMD BATCH $(MYFLAGS) coxph_confint.R
+	R CMD BATCH $(MYFLAGS) coxph_check_ph.R
 	## Concatenate all the scripts together
 	cat save_load.R table_xtabs.R summary.R scatter.R  \
 	    qqplot.R hist_dens.R boxplot.R \
 	    fisher.R student.R wilcoxon.R surv_log_rank.R  \
 	    lm.R lm_confint.R lm_matrix.R \
-	    logit.R logit_confint.R > module2.R
+	    logit.R logit_confint.R coxph.R \
+	    coxph_confint.R coxph_check_ph.R > module2.R
 	cp module2.R ../../../module2.R
 clean : 
 	@rm -f *.eps *.Rout module2.R
