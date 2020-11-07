@@ -433,17 +433,21 @@
 
 \begin{frame}[fragile]
     \frametitle{Fisher's exact and Chi-square tests}
-    %\verbatiminput{../R/module2/?.Rout}
+    \verbatiminput{../R/module2/fisher.Rout}
 \end{frame}
 
 
 \begin{frame}[fragile]
-    \frametitle{...}
-    %\verbatiminput{../R/module2/?.Rout}
+    \frametitle{Student's t test}
+    \verbatiminput{../R/module2/student.Rout}
 \end{frame}
 
 
-%% under construction ... TODO
+\begin{frame}[fragile]
+    \frametitle{Wilcoxon's test}
+    \verbatiminput{../R/module2/wilcoxon.Rout}
+\end{frame}
+
 
 \begin{frame}[fragile]
     \frametitle{Log-rank test}
@@ -487,12 +491,36 @@
     \verbatiminput{../R/module2/lm_matrix.Rout}
 \end{frame}
 
-
-
-
 %% under construction ... TODO
 
-\subsection{GLM and logistic regression}
+\subsection{Logistic regression}
+
+\begin{frame}
+    \frametitle{The model}
+    \textbf{Likelihood / observation model}
+    \[y_i \sim \text{Bernoulli}(\pi_i)\]
+    \textbf{Linear predictor}
+    \[\text{logit}(\pi_i) = x_i' \beta\]
+    \bigskip
+    Given $\{y_i, x_i\}$ for $i=1,...,n$, solve for the regression coefficients, $\beta$.
+    \bigskip
+    We generally solve using maximum likelihood methods.
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{logistic regression - Fit model and get summary output}
+    \fontsize{8}{10}\selectfont
+    \verbatiminput{../R/module2/logit.Rout}
+\end{frame}
+
+
+\begin{frame}[fragile]
+    \frametitle{logistic regression - Odds ratios and confidence intervals}
+    \fontsize{9}{11}\selectfont
+    \verbatiminput{../R/module2/logit_confint.Rout}
+\end{frame}
+
 
 %% under construction ... TODO
 
