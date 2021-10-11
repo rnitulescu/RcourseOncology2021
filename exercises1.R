@@ -11,10 +11,15 @@
 ##   c) Retrieve all odd elements in the matrix
 ##      (Hint: n %% 2 is equal to 1 for odd n and equal to zero for even n)
 
-## Problem 2: Use a for loop to add up the first five non-zero perfect squares
+## Problem 2: Using the data included with R called mtcars
+data(mtcars)
+##   a) Compute the mean mpg of all vehicles
+##   b) Count the number of vehicles
+
+## Problem 3: Use a for loop to add up the first five non-zero perfect squares
 ##      (Hint: 1^2 = 1 and 2^2 = 4 are the first two non-zero perfect squares)
 
-## Problem 3: Using the data included with R called mtcars
+## Problem 4: Using the data included with R called mtcars
 data(mtcars)
 ##   a) Compute the mean mpg of all 4-cylinder vehicles
 ##   b) Count the number of vehicles per cylinder size

@@ -38,7 +38,7 @@
     CR-CHUM
 }
 
-\date[McGill, Nov. 18, 2020]{McGill University, Nov. 18, 2020}
+\date[McGill, Oct. 20, 2021]{McGill University, Oct. 20, 2021}
 
 \AtBeginSection[]
 {
@@ -71,20 +71,26 @@
     \frametitle{Preamble}
     \begin{itemize}
       \item This 3-hour lecture will be broken down into 3 modules
+      \pause
       \item Each module will last 50 minutes
+      \pause
       \begin{itemize}
         \item 30 minutes of lecture time
-        \item 10 minutes for exercises
-        \item 10 minutes for discussing the exercises
+        \pause
+        \item 20 minutes for exercises and discussion
+        \pause
       \end{itemize}
       \item There will be two 15-minute breaks between the modules
+      \pause
       \item I expect that all students have already installed R on their computer and tested that it works
     \end{itemize}
     
     \vfill
     
+    \pause
+
     The source code for this presentation can be found here:\\
-    \url{https://github.com/rnitulescu/RcourseOncology2020}
+    \url{https://github.com/rnitulescu/RcourseOncology2021}
 \end{frame}
 
 
@@ -146,8 +152,11 @@
 \begin{frame}
     \frametitle{What is R?}
     \begin{itemize}
+      \pause
 	  \item Software environment for statistical computing and graphics
+      \pause
 	  \item Steep learning curve
+      \pause
 	  \item Worth learning due to its ubiquity, versatility, and efficiency
     \end{itemize}
 \end{frame}
@@ -169,9 +178,14 @@
 	  \item Official documentation: \url{https://cran.r-project.org/manuals.html}
 	  \item Cheat sheet: \href{https://cran.r-project.org/doc/contrib/Short-refcard.pdf}{Link}
 	  \item Forums: \url{https://stackoverflow.com/}, \url{https://stackexchange.com/}, etc.
+      \pause
 	  \item In R: \texttt{?topic}, \texttt{??keyword}
+      \pause
 	  \item Examples of general topics: \texttt{?Logic}, \texttt{?Arithmetic}, \texttt{?Syntax}
+      \pause
 	  \item Examples of more specific topics: \texttt{?getwd}, \texttt{?dir}
+      \pause
+      \item \textbf{Exercise}: Find and briefly review one or two help files (e.g., \texttt{?sum}, \texttt{?mean})
     \end{itemize}
 \end{frame}
 
@@ -182,10 +196,15 @@
 \begin{frame}[fragile]
     \frametitle{The environment}
     \begin{itemize}
+      \pause
       \item Working directory, paths, files
+      \pause
       \item libraries and the \emph{global} environment
+      \pause
       \item Objects in the \emph{local} environment
+      \pause
       \item \texttt{options()} function (see documentation for details)
+      \pause
     \end{itemize}
     \verbatiminput{../R/module1/environment.Rout}
 \end{frame}
@@ -209,21 +228,37 @@
     or by logical indexing (TRUE, FALSE).
     This means that one can index an R object using expressions that resolve to logical vectors.
     In fact, this technique is used a lot in practice.
+    \pause
     Also note that the function \texttt{which} can be used to convert from logical to numeric indexing.
+    \pause
     \begin{itemize}
       \item Vectors
+      \pause
         \begin{itemize}
           \item Retrieve element \texttt{n} of vector \texttt{x}: \texttt{> x[n]}
+          \pause
           \item 3rd element of a vector of length 3:\\ \texttt{> x[c(FALSE, FALSE, TRUE)]}
+          \pause
         \end{itemize}
       \item Matrices (\texttt{r} for row and \texttt{c} for column)
+      \pause
         \begin{itemize}
           \item Retrieve element (\texttt{r}, \texttt{c}) from matrix \texttt{X}: \texttt{> X[r, c]}
+          \pause
           \item Retrieve row \texttt{r} from matrix \texttt{X}: \texttt{> X[r, ]}
+          \pause
           \item Retrieve column \texttt{c} from matrix \texttt{X}: \texttt{> X[, c]}
         \end{itemize}
     \end{itemize}
+    \pause
     \textbf{Question}: What is the difference between \texttt{X[1,2]} and \texttt{X[c(1,2)]}?
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Exercises}
+    Take 2-3 minutes to work on the in-class Problem 1 (Part I) for module 1.
+    They can be found \href{https://github.com/rnitulescu/RcourseOncology2021/blob/master/exercises1.R}{here}.
 \end{frame}
 
 
@@ -244,16 +279,45 @@
     \frametitle{Accessing objects}
 	\begin{itemize}
 	  \item S3 objects
+      \pause
 	    \begin{itemize}
 	      \item For vectors and matrices, accessing elements is pretty straightforward (see above)
+          \pause
 	      \item For other objects, it can be a little more abstract
+          \pause
 	      \item It is easier to understand them through examples (cue mtcars example)
+          \pause
 	      \item \texttt{[]}: Access component(s) inside of an object
+          \pause
 	      \item \texttt{\$}: Access contents of a single component inside of an object
+          \pause
 	      \item \texttt{[[]]}: Same as \texttt{\$}, but more flexible for programming
 	    \end{itemize}
+      \pause
 	  \item S4 objects are beyond the scope of this course
 	\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Basic arithmetic and counting}
+    \begin{itemize}
+      \pause
+      \item Length of vector: \texttt{length()}
+      \pause
+      \item Number of rows in a data frame: \texttt{nrow()}
+      \pause
+      \item Sum of terms in vector: \texttt{sum()}
+      \pause
+      \item Arithmetic mean of terms in vector: \texttt{mean()}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Exercises}
+    Take 2-3 minutes to work on the in-class Problem 2 (Part I) for module 1.
+    They can be found \href{https://github.com/rnitulescu/RcourseOncology2021/blob/master/exercises1.R}{here}.
 \end{frame}
 
 
@@ -274,6 +338,13 @@
 \begin{frame}[fragile]
     \frametitle{repeat, next, break}
     \verbatiminput{../R/module1/repeat_next_break.Rout}
+\end{frame}
+
+
+\begin{frame}
+    \frametitle{Exercises}
+    Take 2-3 minutes to work on the in-class Problem 3 (Part I) for module 1.
+    They can be found \href{https://github.com/rnitulescu/RcourseOncology2021/blob/master/exercises1.R}{here}.
 \end{frame}
 
 
@@ -317,7 +388,7 @@
 \end{frame}
 
 
-\subsection{Basic variable transformation}
+\subsection{Working with dates and times}
 
 \begin{frame}[fragile]
     \frametitle{Working with dates}
@@ -352,11 +423,24 @@
 \end{frame}
 
 
+\begin{frame}[fragile]
+    \frametitle{User-defined functions}
+    \begin{verbatim}
+      my_fn <- function(x, y, ...) {
+          ...
+          return(...)
+      }
+      my_fn(x=a, y=b, ...)
+    \end{verbatim}
+\end{frame}
+
+
 \begin{frame}
     \frametitle{Exercises}
-    Take 10 minutes to work on the in-class exercises for module 1.
-    They can be found \href{https://github.com/rnitulescu/RcourseOncology2020/blob/master/exercises1.R}{here}.
+    Take 2-3 minutes to work on the in-class Problem 4 (Part I) for module 1.
+    They can be found \href{https://github.com/rnitulescu/RcourseOncology2021/blob/master/exercises1.R}{here}.
 \end{frame}
+
 
 
 %%%%
@@ -569,7 +653,7 @@
 \begin{frame}
     \frametitle{Exercises}
     Take 10 minutes to work on the in-class exercises for module 2.
-    They can be found \href{https://github.com/rnitulescu/RcourseOncology2020/blob/master/exercises2.R}{here}.
+    They can be found \href{https://github.com/rnitulescu/RcourseOncology2021/blob/master/exercises2.R}{here}.
 \end{frame}
 
 
@@ -722,7 +806,7 @@
 \begin{frame}
     \frametitle{Exercises}
     Take 10 minutes to work on the in-class exercises for module 3.
-    They can be found \href{https://github.com/rnitulescu/RcourseOncology2020/blob/master/exercises3.R}{here}.
+    They can be found \href{https://github.com/rnitulescu/RcourseOncology2021/blob/master/exercises3.R}{here}.
 \end{frame}
 
 
