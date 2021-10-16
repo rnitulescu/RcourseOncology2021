@@ -175,17 +175,26 @@
 \begin{frame}
     \frametitle{Getting help}
     \begin{itemize}
-	  \item Official documentation: \url{https://cran.r-project.org/manuals.html}
-	  \item Cheat sheet: \href{https://cran.r-project.org/doc/contrib/Short-refcard.pdf}{Link}
-	  \item Forums: \url{https://stackoverflow.com/}, \url{https://stackexchange.com/}, etc.
+      \item Online:
       \pause
-	  \item In R: \texttt{?topic}, \texttt{??keyword}
+      \begin{itemize}
+	    \item Official documentation: \url{https://cran.r-project.org/manuals.html}
+        \pause
+	    \item Cheat sheet: \href{https://cran.r-project.org/doc/contrib/Short-refcard.pdf}{Link}
+        \pause
+	    \item Forums: \url{https://stackoverflow.com/}, \url{https://stackexchange.com/}, etc.
+      \end{itemize}
       \pause
-	  \item Examples of general topics: \texttt{?Logic}, \texttt{?Arithmetic}, \texttt{?Syntax}
-      \pause
-	  \item Examples of more specific topics: \texttt{?getwd}, \texttt{?dir}
-      \pause
-      \item \textbf{Exercise}: Find and briefly review one or two help files (e.g., \texttt{?sum}, \texttt{?mean})
+	  \item In R:
+      \begin{itemize}
+        \item \texttt{?topic}, \texttt{??keyword}
+        \pause
+	    \item Examples of general topics: \texttt{?Logic}, \texttt{?Arithmetic}, \texttt{?Syntax}
+        \pause
+	    \item Examples of more specific topics: \texttt{?getwd}, \texttt{?dir}
+        \pause
+        \item \textbf{Exercise}: Find and briefly review one or two help files (e.g., \texttt{?sum}, \texttt{?mean})
+      \end{itemize}
     \end{itemize}
 \end{frame}
 
@@ -381,46 +390,46 @@
     \verbatiminput{../R/module1/aggregate.Rout}
 \end{frame}
 
+%% SKIP FOR NOW
+%\begin{frame}[fragile]
+%    \frametitle{reshape}
+%    \verbatiminput{../R/module1/reshape.Rout}
+%\end{frame}
 
-\begin{frame}[fragile]
-    \frametitle{reshape}
-    \verbatiminput{../R/module1/reshape.Rout}
-\end{frame}
+%% SKIP FOR NOW
+%\subsection{Working with dates and times}
 
-
-\subsection{Working with dates and times}
-
-\begin{frame}[fragile]
-    \frametitle{Working with dates}
-    \verbatiminput{../R/module1/dates.Rout}
-\end{frame}
-
-
-\begin{frame}[fragile]
-    \frametitle{Working with times}
-    \verbatiminput{../R/module1/times.Rout}
-\end{frame}
+%\begin{frame}[fragile]
+%    \frametitle{Working with dates}
+%    \verbatiminput{../R/module1/dates.Rout}
+%\end{frame}
 
 
-\begin{frame}
-    \frametitle{Useful functions to look up for future advancement}
-    We've covered a lot of ground in this module,
-    but those interested in more advanced programming in R
-    will greatly benefit from researching these functions:\\
+%\begin{frame}[fragile]
+%    \frametitle{Working with times}
+%    \verbatiminput{../R/module1/times.Rout}
+%\end{frame}
+
+%% SKIP FOR NOW
+%\begin{frame}
+%    \frametitle{Useful functions to look up for future advancement}
+%    We've covered a lot of ground in this module,
+%    but those interested in more advanced programming in R
+%    will greatly benefit from researching these functions:\\
     
-    \begin{itemize}
-      \item \texttt{sum}, \texttt{prod}, and \texttt{ifelse}
-      \item \texttt{min}, \texttt{max}, \texttt{pmin}, and \texttt{pmax}
-      \item \texttt{mean}, \texttt{var}, and \texttt{cor}
-      \item \texttt{nchar}, \texttt{length}, and \texttt{dim}
-      \item \texttt{with} and \texttt{within}
-      \item \texttt{lapply}, \texttt{sapply}, and other \texttt{*apply}
-      \item \texttt{gsub}, \texttt{grep}, \texttt{regexpr}, and other similar ones 
-      \item \texttt{Map} and \texttt{Reduce}
-      \item \texttt{assign} and \texttt{get}
-      \item \texttt{debug} and \texttt{undebug}
-    \end{itemize}
-\end{frame}
+%    \begin{itemize}
+%      \item \texttt{sum}, \texttt{prod}, and \texttt{ifelse}
+%      \item \texttt{min}, \texttt{max}, \texttt{pmin}, and \texttt{pmax}
+%      \item \texttt{mean}, \texttt{var}, and \texttt{cor}
+%      \item \texttt{nchar}, \texttt{length}, and \texttt{dim}
+%      \item \texttt{with} and \texttt{within}
+%      \item \texttt{lapply}, \texttt{sapply}, and other \texttt{*apply}
+%      \item \texttt{gsub}, \texttt{grep}, \texttt{regexpr}, and other similar ones 
+%      \item \texttt{Map} and \texttt{Reduce}
+%      \item \texttt{assign} and \texttt{get}
+%      \item \texttt{debug} and \texttt{undebug}
+%    \end{itemize}
+%\end{frame}
 
 
 \begin{frame}[fragile]
@@ -545,12 +554,15 @@
     \frametitle{The model}
     \textbf{Likelihood / observation model}
     \[y_i \sim \text{Normal}(\mu_i, \sigma_e)\]
+    \pause
     \textbf{Linear predictor}
     \[\mu_i = x_i' \beta\]
+    \pause
     \bigskip
     Given $\{y_i, x_i\}$ for $i=1,...,n$, solve for the regression coefficients, $\beta$,
     and the error variance, $\sigma_e^2$.
     \bigskip
+    \pause
     There are several solutions, including the famous ordinary least-squares estimate.
 \end{frame}
 
@@ -582,11 +594,14 @@
     \frametitle{The model}
     \textbf{Likelihood / observation model}
     \[y_i \sim \text{Bernoulli}(\pi_i)\]
+    \pause
     \textbf{Linear predictor}
     \[\text{logit}(\pi_i) = x_i' \beta\]
+    \pause
     \bigskip
     Given $\{y_i, x_i\}$ for $i=1,...,n$, solve for the regression coefficients, $\beta$.
     \bigskip
+    \pause
     We generally solve using maximum likelihood methods.
 \end{frame}
 
@@ -613,9 +628,9 @@
     \[\lambda(t; x_i) = \lambda_0 e^{x_i(t)' \beta}\]
 
     \bigskip
-
     As opposed to the linear and generalized linear models presented above,
-    this model has not intercept. Instead, the unspecified baseline hazard function
+    this model has no scalar intercept that we estimate as other coefficients.
+    Instead, the unspecified baseline hazard function,
     ($\lambda_0$), acts as the intercept.
 \end{frame}
 
@@ -669,9 +684,12 @@
 \begin{frame}
     \frametitle{The \texttt{pwr} package}
     \begin{itemize}
-      \item \texttt{install.packages("pwr")}
-      \item \texttt{library(pwr)}
       \item \emph{Statistical Power Analysis for the Behavioral Sciences}, by Jacob Cohen
+      \pause
+      \item \texttt{install.packages("pwr")}
+      \pause
+      \item \texttt{library(pwr)}
+      \pause
       \item Example functions: \texttt{pwr.p.test},
             \texttt{pwr.t.test}, \texttt{pwr.2p.test},
             \texttt{pwr.chisq.test}, \texttt{pwr.anova.test}
@@ -693,8 +711,12 @@
 \end{frame}
 
 
-%% under construction ... TODO
-%% One example of power/sample size using formula and uniroot() function?
+\begin{frame}
+    \frametitle{Exercises}
+    Take 2-3 minutes to work on the in-class Problem 1 (Part I) for module 3.
+    They can be found \href{https://github.com/rnitulescu/RcourseOncology2021/blob/master/exercises3.R}{here}.
+\end{frame}
+
 
 
 %% Randomizaton
@@ -702,17 +724,23 @@
 
 \begin{frame}
     \frametitle{Simple randomization}
-	Treatment is randomly allocated to each subject according to a pre-determined probability distribution.\\
+	Treatment is randomly allocated to each subject according to a pre-determined probability distribution.
+
+    \pause
 	
 	\bigskip
 	
 	For example, you plan to recruit 10 subjects and randomly assign to each subject 
 	one of two possible treatments, $A$ or $B$, with equal probability.
+
+    \pause
 	
 	\bigskip
 	
 	To implement this randomization scheme, one must only sample, with equal probability,
 	10 times from the set $\{A, B\}$ with replacement.
+
+    \pause
 	
 	\bigskip
 	
@@ -731,16 +759,22 @@
     \frametitle{Replacement randomization}
 	Replacement randomization is a method used to ensure that treatment allocations
 	done through simple randomization are balanced.
+
+    \pause
 	
 	\bigskip
 	
 	This is put into practice by repeating the simple randomization until balance is achieved.
+
+    \pause
 	
 	\bigskip
 	
 	The downside is that as the sample size and the number of treatment groups increase, the number
 	of iterations required to achieve a balanced allocation increases very quickly and can
 	become computationally too intensive (this is perhaps not much of an issue nowadays).
+
+    \pause
 	
 	\bigskip
 	
@@ -760,14 +794,20 @@
     \frametitle{Random permuted blocks}
 	A solution to the problem of maintaining balanced allocation over time is to use random permuted blocks.
 
+    \pause
+
     \bigskip
 
     A block size is chosen and allocations are permuted within each block.
     This guarantees balance each time a block is completely filled.
 
+    \pause
+
     \bigskip
 
     Ex: \emph{block 1} $[A, A, B, B]$, \emph{block 2} $[B, A, A, B]$, etc.
+
+    \pause
 
     \bigskip
 
@@ -786,15 +826,21 @@
     If one wishes to maintain balance in treatment allocation not only in the overall sample, but also
     in specific sub-groups, then stratified randomization can be used.
 
+    \pause
+
     \bigskip
 
     To perform this kind of randomization, treatments are allocated in such a way to maintain balance across sub-groups.
+
+    \pause
 
     \bigskip
 
     For example, in the context of block randomization, at any time there are two active blocks being filled:
     one for males and one for females. Thus, whenever all blocks are filled, treatment allocation is balanced
     for both males and females.
+
+    \pause
 
     \bigskip
 
@@ -805,7 +851,7 @@
 
 \begin{frame}
     \frametitle{Exercises}
-    Take 10 minutes to work on the in-class exercises for module 3.
+    Take 10 minutes to work on the remaining in-class exercises for module 3.
     They can be found \href{https://github.com/rnitulescu/RcourseOncology2021/blob/master/exercises3.R}{here}.
 \end{frame}
 
