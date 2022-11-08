@@ -1,6 +1,6 @@
 MYFLAGS := --vanilla --quiet --no-timing
 all :
-	R CMD BATCH $(MYFLAGS) save_load.R
+	R CMD BATCH --quiet --no-timing save_load.R
 	R CMD BATCH $(MYFLAGS) table_xtabs.R
 	R CMD BATCH $(MYFLAGS) summary.R
 	R CMD BATCH $(MYFLAGS) scatter.R
